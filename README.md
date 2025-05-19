@@ -17,6 +17,6 @@ pip install pyspark
 ### 2. Run a Script
 Clone the repo and run any of the example files:
 
-git clone https://github.com/sumitsann/pyspark_handson.git
-cd pyspark_handson
-python first.py
+- git clone https://github.com/sumitsann/pyspark_handson.git
+- cd pyspark_handson
+- python first.py
