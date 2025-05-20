@@ -56,5 +56,55 @@ ls= ["zeyobron", "zeyo", "meta"]
 print(ls)
 print()
 
+# Convert list to rdd
+rddls = sc.parallelize(ls)
+print("==========RDDLS==========")
+print(rddls.collect())
+print()
+
+# Add analytics in each elements of the list
+
+# Iterate each element and add Analytics to the each elements
+conrdd = rddls.map(lambda x: x+"Analytics")
+print("===================CONRDD===================")
+print(conrdd.collect())
+print()
+
+# Iterate each elements of the list and filter elements containing "zeyo"
+
+filrdd = rddls.filter(lambda x: 'zeyo' in x)
+print("=======================FILRDD===============")
+print(filrdd.collect())
+print()
+
+# Iterate each elements of the list. Replace "zeyo" with "tera"
+
+reprdd = rddls.map(lambda x: x.replace("zeyo","tera"))
+print("=======================REPRDD===============")
+print(reprdd.collect())
+print()
+
+# Iterate each elements of the list. Replace "zeyo" with empty ""
+emptyrdd = rddls.map(lambda x: x.replace("zeyo",""))
+print("=======================EMPTYRDD===============")
+print(emptyrdd.collect())
+print()
+
+fl = ["A~B", "C~D"]
+print("========================RAW==========================")
+print(fl)
+print()
+
+rddfl=sc.parallelize(fl)
+print("========================RDDFL==========================")
+print(rddfl.collect())
+print()
+
+# Iterate each element of the list and flatten each element of the list using "~" delimiter.
+
+flat = rddfl.flatMap(lambda x:x.split('~'))
+print("========================FLAT==========================")
+print(flat.collect())
+print()
 
 
