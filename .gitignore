@@ -1,0 +1,35 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Spark logs and temp data
+*.log
+metastore_db/
+derby.log
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Virtual environments
+venv/
+env/
+.venv/
+
+# IDE-specific
+.idea/
+.vscode/
+
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# Data files (if generated or large and shouldn't be versioned)
+*.csv
+*.json
+*.parquet
+*.orc
+*.txt
+
+# PySpark temporary files
+.sparkStaging/
